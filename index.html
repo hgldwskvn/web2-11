@@ -31,10 +31,10 @@
      
      var loader=new THREE.TextureLoader();
      var geometry=new THREE.SphereGeometry(1,32,16);
-     var material=new THREE.MashStandarMaterial({
+     var material=new THREE.MeshStandarMaterial({
        color:0xccffcc,
        map:loader.load('logo.jpg')});
-     var mesh=new THREE.Mash(geometry,material);
+     var mesh=new THREE.Mesh(geometry,material);
      scene.add(mesh);
      
        var geometry=new THREE.BoxGeometry(1,1,1);
