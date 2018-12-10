@@ -24,8 +24,13 @@
        camera.updateProjectionMatrix();
        },false);
        
+     var light=new THREE.DirectionalLIght(0xcccccc);
+     light.position.set(0,100,30);
+     scene.add(light);
+     scene.add(new THREE.AmbientLIght(0x666666));
+     
        var geometry=new THREE.BoxGeometry(1,1,1);
-       var material=new THREE.MeshBasicMaterial({color:0xccffcc});
+       var material=new THREE.MeshStandardMaterial({color:0xccffcc});
        var mesh=new THREE.Mesh(geometry,material);
        scene.add(mesh);
        
@@ -33,7 +38,7 @@
        
        var clock=new THREE.Clock();
        var render=function(){
-       requestAnimationFreme(render);
+       requestAnimationFrame(render);
        
        var delta_time=clock.get.Delta();
        mesh.rotation.x +=0.1*deita_time;
